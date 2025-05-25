@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        <div class="section-content">
+            <h2>Featured Projects</h2>
+            <p class="projects-subtitle">A showcase of my recent work and creative solutions</p>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                
+                <!-- Reaction Time Test Game -->
+                <div class="project-card">
+                    <div class<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -611,6 +634,202 @@
             }
         }
 
+        /* Projects Section Styles */
+        .projects-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #d1d5db;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .project-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #f59e0b, #eab308);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-status.featured {
+            background: linear-gradient(45deg, #a855f7, #8b5cf6);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 1.4rem;
+            color: #f9fafb;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-content p {
+            color: #e5e7eb;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .coming-soon {
+            color: #fbbf24 !important;
+            font-weight: 600 !important;
+            font-style: italic !important;
+            margin-bottom: 15px !important;
+        }
+
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .project-skill {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c4b5fd;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-skill:hover {
+            background: rgba(168, 85, 247, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-project {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .btn-project.demo {
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-project.demo:hover {
+            background: linear-gradient(45deg, #7c3aed, #8b5cf6);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-project.code {
+            background: rgba(255, 255, 255, 0.05);
+            color: #e5e7eb;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-project.code:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Responsiveness for Projects */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .project-card {
+                margin: 0 10px;
+            }
+            
+            .project-content {
+                padding: 25px;
+            }
+            
+            .project-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .project-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .btn-project {
+                padding: 15px 20px;
+            }
+            
+            .project-skills {
+                gap: 6px;
+            }
+            
+            .project-skill {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
+        }
+
         /* Mobile Responsiveness for About Section */
         @media (max-width: 768px) {
             .skills-grid {
@@ -1070,8 +1289,100 @@
             <div class="bubble"></div>
         </div>
         <div class="section-content">
-            <h2>Projects</h2>
-            <p>Project showcase coming soon...</p>
+            <h2>Featured Projects</h2>
+            <p class="projects-subtitle">A showcase of my recent work and creative solutions</p>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                
+                <!-- E-Commerce Platform -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Platform">
+                        <div class="project-status">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured e-commerce platform with real-time inventory management, payment processing, and analytics dashboard. Built with modern technologies for scalability and performance.</p>
+                        <p class="coming-soon">Coming Soon</p>
+                        
+                        <div class="project-skills">
+                            <span class="project-skill">React</span>
+                            <span class="project-skill">Node.js</span>
+                            <span class="project-skill">PostgreSQL</span>
+                            <span class="project-skill">Stripe API</span>
+                            <span class="project-skill">Redis</span>
+                        </div>
+                        
+                        <div class="project-buttons">
+                            <a href="#" class="btn-project demo" style="opacity: 0.5; pointer-events: none;">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-project code" style="opacity: 0.5; pointer-events: none;">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reaction Time Test Game -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reaction Time Test Game">
+                        <div class="project-status featured">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Reaction Time Test Game</h3>
+                        <p>Built an interactive web-based game in React.js & JavaScript that measures reaction speed with millisecond precision. Improved performance through 50+ iterations, showcasing attention to detail and iterative development, valuable in consulting environments.</p>
+                        
+                        <div class="project-skills">
+                            <span class="project-skill">React.js</span>
+                            <span class="project-skill">JavaScript</span>
+                        </div>
+                        
+                        <div class="project-buttons">
+                            <a href="#" class="btn-project demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-project code">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planetoids Game -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Planetoids Game">
+                        <div class="project-status featured">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Planetoids Game</h3>
+                        <p>Built a space-themed game with Java and JavaFX, integrating collision detection, physics, and AI behaviors. Conducted rigorous testing to improve frame rate consistency by 15%, demonstrating a structured approach to problem-solving and enhancing user experience.</p>
+                        
+                        <div class="project-skills">
+                            <span class="project-skill">Java</span>
+                            <span class="project-skill">JavaFX</span>
+                        </div>
+                        
+                        <div class="project-buttons">
+                            <a href="#" class="btn-project demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn-project code">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
