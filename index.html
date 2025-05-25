@@ -268,7 +268,200 @@
             background-clip: text;
         }
 
-        /* Mobile Responsiveness */
+        /* About Section Styles */
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-header i {
+            font-size: 24px;
+            color: #a855f7;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #e5e7eb;
+        }
+
+        .education-info h4 {
+            font-size: 1.3rem;
+            color: #f3f4f6;
+            margin-bottom: 8px;
+        }
+
+        .education-info p {
+            color: #d1d5db;
+            font-size: 1.1rem;
+        }
+
+        .about-description {
+            margin: 40px 0;
+        }
+
+        .about-description p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e5e7eb;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .coursework-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: rgba(168, 85, 247, 0.2);
+            color: #e5e7eb;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(168, 85, 247, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .skill-category h4 {
+            color: #a855f7;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            border: 1px solid;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .skill-tag.web {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .skill-tag.prog {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .skill-tag.framework {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .skill-tag.system {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .skill-tag.db {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c4b5fd;
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+
+        .involvement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .involvement-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #e5e7eb;
+            font-size: 1.05rem;
+        }
+
+        .bullet {
+            color: #a855f7;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Mobile Responsiveness for About Section */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .about-card {
+                padding: 20px;
+            }
+            
+            .skill-tags {
+                gap: 6px;
+            }
+            
+            .skill-tag {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+            }
+        }
         @media (max-width: 768px) {
             nav {
                 padding: 15px 20px;
@@ -404,20 +597,20 @@
                 <i class="fas fa-envelope"></i>
                 Get In Touch
             </a>
-            <a href="SYLVESTER%20ELORM%20KPEI.docx.pdf" class="btn btn-secondary" download>
+            <a href="/resume.pdf" class="btn btn-secondary" download>
                 <i class="fas fa-download"></i>
                 Download Resume
             </a>
         </div>
         
         <div class="social-links">
-            <a href="https://github.com/kpeis695" class="social-link" target="_blank">
+            <a href="https://github.com/sylvesterkpei" class="social-link" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/ks200" class="social-link" target="_blank">
+            <a href="https://linkedin.com/in/sylvesterkpei" class="social-link" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:sek266@cornell.edu" class="social-link">
+            <a href="mailto:sk@example.com" class="social-link">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
@@ -431,7 +624,131 @@
     <section class="section" id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p>More content coming soon...</p>
+            
+            <!-- Education Card -->
+            <div class="about-card">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                </div>
+                <div class="education-info">
+                    <h4>Cornell University – Ithaca, New York, USA</h4>
+                    <p>Intended Major: Computer Science</p>
+                </div>
+            </div>
+
+            <!-- Relevant Coursework -->
+            <div class="about-card">
+                <div class="card-header">
+                    <i class="fas fa-book"></i>
+                    <h3>Relevant Coursework</h3>
+                </div>
+                <div class="coursework-tags">
+                    <span class="tag">Data Structures & Algorithms</span>
+                    <span class="tag">Intro CS: Design and Development</span>
+                    <span class="tag">Distributed Systems</span>
+                    <span class="tag">Probability and Statistics</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Functional Programming</span>
+                </div>
+            </div>
+
+            <!-- About Description -->
+            <div class="about-description">
+                <p>I am a Computer Science student at Cornell University, driven by a passion for tackling complex challenges through software. My academic pursuits and practical experiences have equipped me with robust skills in Python, C++, and Java, along with a deep understanding of systems programming, full-stack development, and cloud infrastructures like AWS.</p>
+                
+                <p>I thrive in leadership roles and am committed to building efficient, scalable software solutions. My focus extends to AI/ML, an area I believe holds transformative potential. I am constantly seeking opportunities to apply my knowledge to create impactful technology.</p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <!-- Web Technologies -->
+                <div class="skill-category">
+                    <h4>Web Technologies</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag web">React</span>
+                        <span class="skill-tag web">Vue.js</span>
+                        <span class="skill-tag web">TypeScript</span>
+                        <span class="skill-tag web">JavaScript</span>
+                        <span class="skill-tag web">HTML5/CSS3</span>
+                        <span class="skill-tag web">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag prog">Python</span>
+                        <span class="skill-tag prog">Java</span>
+                        <span class="skill-tag prog">C++</span>
+                        <span class="skill-tag prog">C</span>
+                        <span class="skill-tag prog">JavaScript (ES6)</span>
+                        <span class="skill-tag prog">SQL</span>
+                        <span class="skill-tag prog">OCaml</span>
+                        <span class="skill-tag prog">R</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category">
+                    <h4>Frameworks & Runtime</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag framework">Node.js</span>
+                        <span class="skill-tag framework">Express.js</span>
+                        <span class="skill-tag framework">Python</span>
+                    </div>
+                </div>
+
+                <!-- Systems & Tools -->
+                <div class="skill-category">
+                    <h4>Systems & Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag system">Linux</span>
+                        <span class="skill-tag system">Git</span>
+                        <span class="skill-tag system">GitHub</span>
+                        <span class="skill-tag system">React.js</span>
+                        <span class="skill-tag system">Node.js</span>
+                        <span class="skill-tag system">Kubernetes</span>
+                        <span class="skill-tag system">MySQL</span>
+                        <span class="skill-tag system">Redis</span>
+                        <span class="skill-tag system">Firebase</span>
+                        <span class="skill-tag system">Figma</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag db">PostgreSQL</span>
+                        <span class="skill-tag db">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Involvement -->
+            <div class="about-card">
+                <div class="card-header">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Campus Involvement</h3>
+                </div>
+                <div class="involvement-list">
+                    <div class="involvement-item">
+                        <span class="bullet">•</span>
+                        <span>National Society of Black Engineers</span>
+                    </div>
+                    <div class="involvement-item">
+                        <span class="bullet">•</span>
+                        <span>Association of Computer Science Undergraduates, Member</span>
+                    </div>
+                    <div class="involvement-item">
+                        <span class="bullet">•</span>
+                        <span>Undergraduate Artificial Intelligence Organization</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
