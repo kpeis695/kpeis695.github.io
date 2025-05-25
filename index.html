@@ -454,6 +454,163 @@
             font-weight: bold;
         }
 
+        /* Modern Experience Section Styles */
+        .experience-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #d1d5db;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+
+        .experience-card-modern {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #a855f7, #8b5cf6, #7c3aed);
+        }
+
+        .experience-card-modern:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .experience-header-modern {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .role-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #a855f7, #8b5cf6);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3);
+        }
+
+        .role-details h3 {
+            font-size: 1.6rem;
+            color: #f9fafb;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+
+        .role-details h4 {
+            font-size: 1.2rem;
+            color: #a855f7;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .experience-content {
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .experience-content p {
+            color: #e5e7eb;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .experience-content strong {
+            color: #f9fafb;
+            font-weight: 600;
+        }
+
+        .skill-tags-experience {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag-exp {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c4b5fd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .skill-tag-exp:hover {
+            background: rgba(168, 85, 247, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.2);
+        }
+
+        /* Remove old experience styles */
+        .experience-card {
+            display: none;
+        }
+
+        /* Mobile Responsiveness for Modern Experience */
+        @media (max-width: 768px) {
+            .experience-card-modern {
+                padding: 25px;
+            }
+            
+            .experience-header-modern {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .role-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .role-details h3 {
+                font-size: 1.4rem;
+            }
+            
+            .role-details h4 {
+                font-size: 1.1rem;
+            }
+            
+            .experience-content p {
+                font-size: 1rem;
+            }
+            
+            .skill-tags-experience {
+                gap: 8px;
+            }
+            
+            .skill-tag-exp {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+        }
+
         /* Mobile Responsiveness for About Section */
         @media (max-width: 768px) {
             .skills-grid {
@@ -634,6 +791,18 @@
 
     <!-- About Section -->
     <section class="section" id="about">
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="section-content">
             <h2>About Me</h2>
             
@@ -773,11 +942,11 @@
                     </div>
                     <div class="involvement-item">
                         <span class="bullet">•</span>
-                        <span>Association of Computer Science Undergraduates</span>
+                        <span>Association of Computer Science Undergraduates, Member</span>
                     </div>
                     <div class="involvement-item">
                         <span class="bullet">•</span>
-                        <span>Underrepresented Minorities in Computing</span>
+                        <span>Undergraduate Artificial Intelligence Organization</span>
                     </div>
                 </div>
             </div>
@@ -786,14 +955,120 @@
 
     <!-- Experience Section -->
     <section class="section" id="experience">
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="section-content">
-            <h2>Experience</h2>
-            <p>Professional experience content...</p>
+            <h2>Professional Experience</h2>
+            <p class="experience-subtitle">Building innovative solutions across diverse industries</p>
+            
+            <!-- Jane Street Experience -->
+            <div class="experience-card-modern">
+                <div class="experience-header-modern">
+                    <div class="role-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="role-details">
+                        <h3>Software Engineering Fellow</h3>
+                        <h4>Jane Street</h4>
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                    <p>Selected as <strong>1 of 51 students nationwide</strong> (from 1,000+ applicants) for Jane Street's <strong>FOCUS</strong> Program, centered on software engineering, functional programming, and large-scale systems.</p>
+                    
+                    <p>Completed <strong>10+</strong> hours of technical workshops and collaborative challenges, including hands-on experience with <strong>OCaml</strong> to simulate real-time trading infrastructure.</p>
+                    
+                    <p>Engaged in <strong>1:1</strong> conversations with <strong>5+ Jane Street engineers</strong>, gaining direct insight into system design, code reliability, and engineering culture at one of the world's leading trading firms.</p>
+                </div>
+                
+                <div class="skill-tags-experience">
+                    <span class="skill-tag-exp">OCaml</span>
+                    <span class="skill-tag-exp">Functional Programming</span>
+                    <span class="skill-tag-exp">System Design</span>
+                </div>
+            </div>
+
+            <!-- GhCode Foundation Experience -->
+            <div class="experience-card-modern">
+                <div class="experience-header-modern">
+                    <div class="role-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="role-details">
+                        <h3>Founder</h3>
+                        <h4>GhCode Foundation</h4>
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                    <p>Founded a <strong>tech-education foundation</strong> that empowered <strong>500+ students</strong> by developing a full-stack learning management system with <strong>React, Node.js, and Firebase</strong>, reducing onboarding time by <strong>50%</strong>.</p>
+                    
+                    <p>Created automated grading scripts in <strong>Python</strong>, increasing grading accuracy by <strong>30%</strong> and scalability by <strong>40%</strong>.</p>
+                    
+                    <p>Secured <strong>3+</strong> strategic partnerships with local organizations and tech firms, expanding program reach and improving resource availability by <strong>25%</strong>.</p>
+                </div>
+                
+                <div class="skill-tags-experience">
+                    <span class="skill-tag-exp">React</span>
+                    <span class="skill-tag-exp">Node.js</span>
+                    <span class="skill-tag-exp">Firebase</span>
+                    <span class="skill-tag-exp">Python</span>
+                    <span class="skill-tag-exp">Leadership</span>
+                </div>
+            </div>
+
+            <!-- Robotech Challenge Experience -->
+            <div class="experience-card-modern">
+                <div class="experience-header-modern">
+                    <div class="role-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="role-details">
+                        <h3>Champion</h3>
+                        <h4>Robotech Challenge</h4>
+                    </div>
+                </div>
+                
+                <div class="experience-content">
+                    <p>Led a team of <strong>7</strong> to win <strong>1st place</strong> among <strong>78 teams</strong> by developing an autonomous cleaning robot using <strong>Python</strong>.</p>
+                    
+                    <p>Optimized control algorithms for task allocation and UV-C light-based disinfection, achieving an <strong>85% reduction</strong> in surface contamination and improving sanitation efficiency by <strong>40%</strong> in controlled environments, demonstrating an innovative approach to problem-solving and project management.</p>
+                </div>
+                
+                <div class="skill-tags-experience">
+                    <span class="skill-tag-exp">Python</span>
+                    <span class="skill-tag-exp">Robotics</span>
+                    <span class="skill-tag-exp">Algorithm Design</span>
+                    <span class="skill-tag-exp">Team Leadership</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="section" id="projects">
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="section-content">
             <h2>Projects</h2>
             <p>Project showcase coming soon...</p>
@@ -802,6 +1077,18 @@
 
     <!-- Contact Section -->
     <section class="section" id="contact">
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="section-content">
             <h2>Contact</h2>
             <p>Contact form and information...</p>
