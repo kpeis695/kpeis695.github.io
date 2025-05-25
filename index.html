@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000 0%, #1a0033 25%, #2d1b69 50%, #6b46c1 75%, #9333ea 100%);
             min-height: 100vh;
             color: white;
             overflow-x: hidden;
@@ -170,9 +170,9 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #1a0033, #6b46c1);
             color: white;
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 20px rgba(107, 70, 193, 0.4);
         }
 
         .btn-secondary {
@@ -188,7 +188,7 @@
         }
 
         .btn-primary:hover {
-            background: linear-gradient(45deg, #764ba2, #667eea);
+            background: linear-gradient(45deg, #6b46c1, #9333ea);
         }
 
         .btn-secondary:hover {
@@ -294,7 +294,7 @@
             }
         }
 
-        /* Particle Background */
+        /* Bubble Animation */
         .particles {
             position: absolute;
             top: 0;
@@ -305,29 +305,59 @@
             z-index: -1;
         }
 
-        .particle {
+        .bubble {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            bottom: -100px;
             border-radius: 50%;
-            animation: float-particles 20s infinite linear;
+            opacity: 0.6;
+            animation: bubble-rise 15s infinite linear;
+            background: linear-gradient(135deg, 
+                rgba(107, 70, 193, 0.3) 0%, 
+                rgba(147, 51, 234, 0.4) 25%,
+                rgba(168, 85, 247, 0.3) 50%,
+                rgba(196, 181, 253, 0.2) 75%,
+                rgba(255, 255, 255, 0.1) 100%);
+            box-shadow: 
+                0 0 20px rgba(107, 70, 193, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
         }
 
-        @keyframes float-particles {
+        .bubble:nth-child(odd) {
+            background: linear-gradient(135deg, 
+                rgba(147, 51, 234, 0.4) 0%, 
+                rgba(107, 70, 193, 0.3) 25%,
+                rgba(79, 70, 229, 0.2) 50%,
+                rgba(99, 102, 241, 0.3) 75%,
+                rgba(196, 181, 253, 0.2) 100%);
+        }
+
+        @keyframes bubble-rise {
             0% {
-                transform: translateY(100vh) rotate(0deg);
+                transform: translateY(0) rotate(0deg) scale(0.5);
                 opacity: 0;
             }
             10% {
-                opacity: 1;
+                opacity: 0.6;
             }
             90% {
-                opacity: 1;
+                opacity: 0.3;
             }
             100% {
-                transform: translateY(-100px) rotate(360deg);
+                transform: translateY(-100vh) rotate(360deg) scale(1.2);
                 opacity: 0;
             }
         }
+
+        .bubble:nth-child(1) { left: 10%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 12s; }
+        .bubble:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 18s; }
+        .bubble:nth-child(3) { left: 25%; width: 80px; height: 80px; animation-delay: 4s; animation-duration: 14s; }
+        .bubble:nth-child(4) { left: 40%; width: 40px; height: 40px; animation-delay: 1s; animation-duration: 16s; }
+        .bubble:nth-child(5) { left: 70%; width: 35px; height: 35px; animation-delay: 3s; animation-duration: 13s; }
+        .bubble:nth-child(6) { left: 80%; width: 55px; height: 55px; animation-delay: 5s; animation-duration: 15s; }
+        .bubble:nth-child(7) { left: 32%; width: 25px; height: 25px; animation-delay: 7s; animation-duration: 17s; }
+        .bubble:nth-child(8) { left: 55%; width: 70px; height: 70px; animation-delay: 6s; animation-duration: 11s; }
+        .bubble:nth-child(9) { left: 85%; width: 30px; height: 30px; animation-delay: 8s; animation-duration: 19s; }
+        .bubble:nth-child(10) { left: 15%; width: 45px; height: 45px; animation-delay: 9s; animation-duration: 20s; }
     </style>
 </head>
 <body>
@@ -345,7 +375,18 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="particles"></div>
+        <div class="particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         
         <div class="profile-image">SK</div>
         
@@ -445,28 +486,16 @@
             }
         });
 
-        // Create floating particles
-        function createParticles() {
+        // Create floating bubbles
+        function createBubbles() {
             const particlesContainer = document.querySelector('.particles');
             
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                // Random size and position
-                const size = Math.random() * 4 + 1;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                
-                particlesContainer.appendChild(particle);
-            }
+            // Remove old particle creation code since we now have CSS bubbles
+            // The bubbles are now created with HTML and CSS for better performance
         }
 
-        // Initialize particles
-        createParticles();
+        // Initialize bubbles (no longer needed but keeping function for compatibility)
+        // createBubbles();
 
         // Add hover effects to buttons
         document.querySelectorAll('.btn').forEach(btn => {
