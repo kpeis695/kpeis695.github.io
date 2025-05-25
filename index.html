@@ -792,6 +792,280 @@
             transform: translateY(-2px);
         }
 
+        /* Other Notable Projects Styles */
+        .other-projects-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .other-projects-section h3 {
+            font-size: 1.8rem;
+            color: #f9fafb;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .other-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .other-project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .other-project-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .other-project-card h4 {
+            font-size: 1.2rem;
+            color: #a855f7;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .other-project-card p {
+            color: #e5e7eb;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* Contact Section Styles */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header h2 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #fbbf24, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.2rem;
+            color: #d1d5db;
+            font-style: italic;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        .contact-description {
+            color: #e5e7eb;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact-icon.email {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+
+        .contact-icon.phone {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .contact-icon.location {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .contact-details h4 {
+            color: #f9fafb;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        .social-section h4 {
+            color: #f9fafb;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact-social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-social-link:hover {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c4b5fd;
+            transform: translateY(-3px);
+        }
+
+        /* Contact Form Styles */
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(15px);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #f9fafb;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #f9fafb;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #a855f7;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #7c3aed, #8b5cf6);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Mobile Responsiveness for Contact */
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form-container {
+                padding: 25px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .contact-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .other-projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Mobile Responsiveness for Projects */
         @media (max-width: 768px) {
             .projects-grid {
@@ -1304,7 +1578,7 @@
                     <div class="project-content">
                         <h3>E-Commerce Platform</h3>
                         <p>A full-featured e-commerce platform with real-time inventory management, payment processing, and analytics dashboard. Built with modern technologies for scalability and performance.</p>
-                        <p class="coming-soon">Coming Soon, Anticipate!!</p>
+                        <p class="coming-soon">Coming Soon</p>
                         
                         <div class="project-skills">
                             <span class="project-skill">React</span>
@@ -1343,11 +1617,11 @@
                         </div>
                         
                         <div class="project-buttons">
-                            <a href="https://kpeis695.github.io/REACTION-TIME-TEST-GAME/" class="btn-project demo">
+                            <a href="#" class="btn-project demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
-                            <a href="https://github.com/kpeis695/REACTION-TIME-TEST-GAME" class="btn-project code">
+                            <a href="#" class="btn-project code">
                                 <i class="fab fa-github"></i>
                                 Code
                             </a>
@@ -1371,14 +1645,49 @@
                         </div>
                         
                         <div class="project-buttons">
-                            <a href="https://kpeis695.github.io/kpeis695-planetoids-web-game/" class="btn-project demo">
+                            <a href="#" class="btn-project demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
-                            <a href="https://github.com/kpeis695/kpeis695-planetoids-web-game" class="btn-project code">
+                            <a href="#" class="btn-project code">
                                 <i class="fab fa-github"></i>
                                 Code
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Notable Projects Section -->
+            <div class="other-projects-section">
+                <h3>Other Notable Projects</h3>
+                
+                <div class="other-projects-grid">
+                    <!-- Portfolio Website Project -->
+                    <div class="other-project-card">
+                        <div class="other-project-content">
+                            <h4>Portfolio Website</h4>
+                            <p>Personal portfolio website showcasing projects and skills with smooth animations and responsive design. This very website!</p>
+                            
+                            <div class="project-skills">
+                                <span class="project-skill">React</span>
+                                <span class="project-skill">Tailwind CSS</span>
+                                <span class="project-skill">Lucide Icons</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Website Alternative -->
+                    <div class="other-project-card">
+                        <div class="other-project-content">
+                            <h4>Portfolio Website</h4>
+                            <p>Personal portfolio website showcasing projects and skills with smooth animations and responsive design.</p>
+                            
+                            <div class="project-skills">
+                                <span class="project-skill">Next.js</span>
+                                <span class="project-skill">Tailwind CSS</span>
+                                <span class="project-skill">Framer Motion</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1401,9 +1710,102 @@
             <div class="bubble"></div>
         </div>
         <div class="section-content">
-            <h2>Contact</h2>
-            <p>Contact form and information...</p>
-        </div>
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Let's Connect</h2>
+                    <p class="contact-subtitle">I'm always interested in new opportunities and exciting projects</p>
+                </div>
+                
+                <div class="contact-content">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p class="contact-description">Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear from you. Let's create something amazing together!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>sek266@cornell.edu</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon phone">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Ithaca, NY</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h4>Follow Me</h4>
+                            <div class="contact-social-links">
+                                <a href="https://github.com/kpeis695" class="contact-social-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ks200" class="contact-social-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="contact-social-link" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Your First Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Your Last Name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <script>
