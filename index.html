@@ -37,7 +37,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a0033 25%, #2d1b69 50%, #6b46c1 75%, #9333ea 100%);
+            background: linear-gradient(180deg, #000000 0%, #1a0033 50%, #2d1b69 100%);
             min-height: 100vh;
             color: white;
             overflow-x: hidden;
@@ -807,38 +807,48 @@
         }
 
         .other-projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            display: flex;
+            justify-content: center;
         }
 
         .other-project-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 20px;
+            padding: 30px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            max-width: 500px;
+            width: 100%;
         }
 
         .other-project-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
         }
 
         .other-project-card h4 {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #a855f7;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
         .other-project-card p {
             color: #e5e7eb;
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+        }
+
+        .other-project-card .project-skills {
+            margin-bottom: 25px;
+        }
+
+        .other-project-card .project-buttons {
+            display: flex;
+            gap: 15px;
         }
 
         /* Contact Section Styles */
@@ -1670,23 +1680,20 @@
                             <p>Personal portfolio website showcasing projects and skills with smooth animations and responsive design. This very website!</p>
                             
                             <div class="project-skills">
-                                <span class="project-skill">React</span>
-                                <span class="project-skill">Tailwind CSS</span>
-                                <span class="project-skill">Lucide Icons</span>
+                                <span class="project-skill">HTML/CSS</span>
+                                <span class="project-skill">JavaScript</span>
+                                <span class="project-skill">Responsive Design</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Website Alternative -->
-                    <div class="other-project-card">
-                        <div class="other-project-content">
-                            <h4>Portfolio Website</h4>
-                            <p>Personal portfolio website showcasing projects and skills with smooth animations and responsive design.</p>
                             
-                            <div class="project-skills">
-                                <span class="project-skill">Next.js</span>
-                                <span class="project-skill">Tailwind CSS</span>
-                                <span class="project-skill">Framer Motion</span>
+                            <div class="project-buttons">
+                                <a href="https://kpeis695.github.io" class="btn-project demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/kpeis695/kpeis695.github.io" class="btn-project code" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
                             </div>
                         </div>
                     </div>
