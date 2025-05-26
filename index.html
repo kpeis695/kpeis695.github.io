@@ -1576,6 +1576,222 @@
         .bubble:nth-child(8) { left: 55%; width: 70px; height: 70px; animation-delay: 6s; animation-duration: 11s; }
         .bubble:nth-child(9) { left: 85%; width: 30px; height: 30px; animation-delay: 8s; animation-duration: 19s; }
         .bubble:nth-child(10) { left: 15%; width: 45px; height: 45px; animation-delay: 9s; animation-duration: 20s; }
+
+        /* Fix SK Profile Circle Background */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(100, 100, 120, 0.4); /* Changed from white transparency to darker gray */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(150, 150, 170, 0.5); /* Darker border */
+            transition: all 0.3s ease;
+            animation: float 6s ease-in-out infinite;
+            color: #f8f9fa; /* Ensure text is white */
+        }
+
+        /* Fix About Card Backgrounds */
+        .about-card {
+            background: rgba(60, 60, 80, 0.3); /* Darker background instead of white transparency */
+            border: 1px solid rgba(120, 120, 140, 0.3); /* More visible border */
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .about-card:hover {
+            background: rgba(80, 80, 100, 0.4); /* Darker hover state */
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Fix Card Headers and Text Colors */
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #f1f3f4; /* Brighter gray instead of #e5e7eb */
+        }
+        
+        .education-info h4 {
+            font-size: 1.3rem;
+            color: #ffffff; /* Pure white instead of #f3f4f6 */
+            margin-bottom: 8px;
+        }
+
+        .education-info p {
+            color: #e8eaed; /* Brighter gray instead of #d1d5db */
+            font-size: 1.1rem;
+        }
+        
+        /* Fix Skill Category Backgrounds */
+        .skill-category {
+            background: rgba(50, 50, 70, 0.4); /* Darker background */
+            border: 1px solid rgba(100, 100, 120, 0.4); /* More visible border */
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            background: rgba(70, 70, 90, 0.5); /* Darker hover */
+            transform: translateY(-3px);
+        }
+        
+        /* Fix Experience Card Backgrounds */
+        .experience-card-modern {
+            background: rgba(60, 60, 80, 0.3); /* Darker background */
+            border: 1px solid rgba(120, 120, 140, 0.3); /* More visible border */
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card-modern:hover {
+            background: rgba(80, 80, 100, 0.4); /* Darker hover */
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Fix Project Card Backgrounds */
+        .project-card {
+            background: rgba(60, 60, 80, 0.3); /* Darker background */
+            border: 1px solid rgba(120, 120, 140, 0.3); /* More visible border */
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            background: rgba(80, 80, 100, 0.4); /* Darker hover */
+        }
+
+        /* Fix Other Project Card */
+        .other-project-card {
+            background: rgba(60, 60, 80, 0.3); /* Darker background */
+            border: 1px solid rgba(120, 120, 140, 0.3); /* More visible border */
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .other-project-card:hover {
+            background: rgba(80, 80, 100, 0.4); /* Darker hover */
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Fix Contact Form Background */
+        .contact-form-container {
+            background: rgba(60, 60, 80, 0.3); /* Darker background */
+            border: 1px solid rgba(120, 120, 140, 0.3); /* More visible border */
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(15px);
+        }
+
+        /* Fix Form Input Backgrounds */
+        .form-group input,
+        .form-group textarea {
+            background: rgba(80, 80, 100, 0.4); /* Darker input backgrounds */
+            border: 1px solid rgba(140, 140, 160, 0.4); /* More visible borders */
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #f9fafb;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #a855f7;
+            background: rgba(100, 100, 120, 0.5); /* Darker focus state */
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+        }
+        
+        /* Mobile-specific color fixes */
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                font-size: 40px;
+                background: rgba(80, 80, 100, 0.5); /* Even darker for mobile */
+                border: 3px solid rgba(130, 130, 150, 0.6); /* More visible border */
+                color: #ffffff; /* Ensure white text */
+            }
+
+            .about-card,
+            .experience-card-modern,
+            .project-card,
+            .other-project-card,
+            .contact-form-container {
+                background: rgba(40, 40, 60, 0.5); /* Darker backgrounds for mobile */
+                border: 1px solid rgba(100, 100, 120, 0.5); /* More visible borders */
+            }
+        
+            .card-header h3,
+            .education-info h4,
+            .role-details h3,
+            .project-content h3,
+            .other-project-card h4 {
+                color: #ffffff; /* Pure white for better contrast on mobile */
+            }
+        
+            .education-info p,
+            .about-description p,
+            .experience-content p,
+            .project-content p,
+            .other-project-card p {
+                color: #f0f2f5; /* Very light gray for mobile readability */
+            }
+        
+            .form-group input,
+            .form-group textarea {
+                background: rgba(60, 60, 80, 0.6); /* Darker inputs for mobile */
+                border: 1px solid rgba(120, 120, 140, 0.6);
+                color: #ffffff; /* Pure white text */
+            }
+
+            .form-group input::placeholder,
+            .form-group textarea::placeholder {
+                color: #c0c2c7; /* Lighter placeholder text */
+            }
+        }
+        
+        /* Extra dark mode for very small screens */
+        @media (max-width: 480px) {
+            .profile-image {
+                background: rgba(60, 60, 80, 0.7); /* Very dark for small screens */
+                border: 3px solid rgba(110, 110, 130, 0.7);
+            }
+        
+            .about-card,
+            .experience-card-modern,
+            .project-card,
+            .other-project-card,
+            .contact-form-container {
+                background: rgba(30, 30, 50, 0.7); /* Very dark backgrounds */
+                border: 1px solid rgba(80, 80, 100, 0.7);
+            }
+        }
     </style>
 </head>
 <body>
